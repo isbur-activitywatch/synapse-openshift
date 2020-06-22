@@ -1,4 +1,4 @@
-#!python
+#!/bin/sh
 
 print('Hello world!')
 
