@@ -6,4 +6,5 @@ then  ! echo data is not empty
 else  cp -r /tmp/src/data /data
 fi
 echo Before python script
-python /start.py
+# Fuck the /start.py!!!
+python -m synapse.app.homeserver --config-path $SYNAPSE_CONFIG_DIR/homeserver.yaml
