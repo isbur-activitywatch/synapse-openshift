@@ -5,12 +5,12 @@
 # then  ! echo data is not empty
 # else  cp -r /tmp/src/data /data
 # fi
-mkdir /data2
-chmod 777 /data2
-export SYNAPSE_CONFIG_DIR=/data2
-export SYNAPSE_DATA_DIR=/data2
+mkdir /tmp/src/data2
+chmod 777 /tmp/src/data2
+export SYNAPSE_CONFIG_DIR=/tmp/src/data2
+export SYNAPSE_DATA_DIR=/tmp/src/data2
 python /start.py generate
-cd /data2
+cd /tmp/src/data2
 ls
 
 echo Before python module synapse.app.homeserver run
