@@ -17,5 +17,5 @@ python /start.py generate
 
 
 echo Before python module synapse.app.homeserver run
-# Fuck the /start.py!!!
+
 python -m synapse.app.homeserver --config-path $SYNAPSE_CONFIG_PATH
