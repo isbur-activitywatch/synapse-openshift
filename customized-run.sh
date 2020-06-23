@@ -5,7 +5,10 @@
 # then  ! echo data is not empty
 # else  cp -r /tmp/src/data /data
 # fi
-chmod -R 777 /data
+mkdir /data2
+chmod -R 777 /data2
+export SYNAPSE_CONFIG_DIR=/data2
+export SYNAPSE_DATA_DIR=/data2
 python /start.py generate
 echo Before python script
 # Fuck the /start.py!!!
