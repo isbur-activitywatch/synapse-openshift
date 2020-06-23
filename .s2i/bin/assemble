@@ -1,2 +1,3 @@
 # We use Source2Image strategy just to bring sources in git repo into the container
 chmod 777 -R /tmp/src   # I've gone wild!!!
+chown 1001 -R /tmp/src
