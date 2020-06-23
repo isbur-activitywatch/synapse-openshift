@@ -6,10 +6,13 @@
 # else  cp -r /tmp/src/data /data
 # fi
 mkdir /data2
-chmod -R 777 /data2
+chmod 777 /data2
 export SYNAPSE_CONFIG_DIR=/data2
 export SYNAPSE_DATA_DIR=/data2
 python /start.py generate
-echo Before python script
+cd /data2
+ls
+
+echo Before python module synapse.app.homeserver run
 # Fuck the /start.py!!!
 python -m synapse.app.homeserver --config-path $SYNAPSE_CONFIG_DIR/homeserver.yaml
