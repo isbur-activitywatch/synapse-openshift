@@ -6,18 +6,14 @@
 # else  cp -r /tmp/src/data /data
 # fi
 mkdir /tmp/src/data2
+export SYNAPSE_SERVER_NAME=foo
+export SYNAPSE_REPORT_STATS=yes
 export SYNAPSE_CONFIG_DIR=/tmp/src/data2
 export SYNAPSE_CONFIG_PATH=$SYNAPSE_CONFIG_DIR/homeserver.yaml
 export SYNAPSE_DATA_DIR=/tmp/src/data2
+export UID=$(id -u)
+export GID=0
 python /start.py generate
-cd /tmp/src
-pwd
-ls -la
-cd data2
-pwd
-ls -la
-id
-
 
 
 echo Before python module synapse.app.homeserver run
