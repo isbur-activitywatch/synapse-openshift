@@ -6,16 +6,13 @@
 # else  cp -r /tmp/src/data /data
 # fi
 mkdir /tmp/src/data2
-chmod 777 /tmp/src/data2
 export SYNAPSE_CONFIG_DIR=/tmp/src/data2
+export SYNAPSE_CONFIG_PATH=$SYNAPSE_CONFIG_DIR/homeserver.yaml
 export SYNAPSE_DATA_DIR=/tmp/src/data2
-python /start.py generate
-ls -la
-cd /tmp/src/data2
-pwd
-ls
+python -m synapse.app.homeserver --server-name foo --report-stats yes --config-path $SYNAPSE_CONFIG_PATH --config-directory $SYNAPSE_CONFIG_DIR --data-directory $SYNAPSE_DATA_DIR --generate-config --open-private-ports
+
 
 
 echo Before python module synapse.app.homeserver run
 # Fuck the /start.py!!!
-python -m synapse.app.homeserver --config-path $SYNAPSE_CONFIG_DIR/homeserver.yaml
+python -m synapse.app.homeserver --config-path $SYNAPSE_CONFIG_PATH
