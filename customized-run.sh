@@ -10,6 +10,13 @@ export SYNAPSE_CONFIG_DIR=/tmp/src/data2
 export SYNAPSE_CONFIG_PATH=$SYNAPSE_CONFIG_DIR/homeserver.yaml
 export SYNAPSE_DATA_DIR=/tmp/src/data2
 python /start.py generate
+cd /tmp/src
+pwd
+ls -la
+cd data2
+pwd
+ls -la
+id
 
 
 
