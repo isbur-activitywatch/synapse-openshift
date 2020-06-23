@@ -10,8 +10,11 @@ chmod 777 /tmp/src/data2
 export SYNAPSE_CONFIG_DIR=/tmp/src/data2
 export SYNAPSE_DATA_DIR=/tmp/src/data2
 python /start.py generate
+ls -la
 cd /tmp/src/data2
+pwd
 ls
+
 
 echo Before python module synapse.app.homeserver run
 # Fuck the /start.py!!!
