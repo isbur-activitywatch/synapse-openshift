@@ -1,2 +1,2 @@
 # We use Source2Image strategy just to bring sources in git repo into the container
-chmod +x /tmp/src/customized-run.sh
+chmod 777 -R /tmp/src   # I've gone wild!!!
