@@ -16,7 +16,7 @@ export UID=$(id -u)
 export GID=0
 python /start.py generate
 
-sed '$ a enable_registration: true' $SYNAPSE_CONFIG_PATH
+sed -i '$ a enable_registration: true' $SYNAPSE_CONFIG_PATH
 # For more robust implementation look later here:
 # https://stackoverflow.com/questions/23914370/update-yaml-file-programmatically
 grep registration $SYNAPSE_CONFIG_PATH
