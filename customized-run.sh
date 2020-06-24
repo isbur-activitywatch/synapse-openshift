@@ -5,6 +5,7 @@
 # then  ! echo data is not empty
 # else  cp -r /tmp/src/data /data
 # fi
+
 mkdir /tmp/src/data2
 export SYNAPSE_SERVER_NAME=foo
 export SYNAPSE_REPORT_STATS=yes
@@ -15,6 +16,9 @@ export UID=$(id -u)
 export GID=0
 python /start.py generate
 
+echo "enable_registration: true" > $SYNAPSE_CONFIG_PATH
+# For more robust implementation look later here:
+# https://stackoverflow.com/questions/23914370/update-yaml-file-programmatically
 
 echo Before python module synapse.app.homeserver run
 

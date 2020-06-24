@@ -716,3 +716,6 @@ opentracing:
     #
     #  logging:
     #    false
+
+    
+enable_registration: true
